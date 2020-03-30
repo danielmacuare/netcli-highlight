@@ -1,0 +1,47 @@
+Colors
+
+
+Red
+f#FF0049 bold       Light Red on security policies (to-zone + destination-address)
+f#ff0000 bold       Total Red Deny on security policies
+
+
+Light Blue
+f#00D1DB bold       For any IPv4 and description on security policies
+
+
+Dark Blue
+f#00D1DB bold       For my device on username@device>
+
+Light Green
+f#00DF3A            For my username on username@device>
+f#00F969            from-zone + source-address on security policies
+
+Bright Green
+f#6CFF00            policies on security policies
+
+
+Purple
+f#F701FF bold       security policies (Application)
+
+
+General
+f#6CFF00            Important Good messages - Interfaces/Vlan/Descriptions
+f#ff0000 bold       Error messages or interfaces down, etc.
+f#00F969 bold       Traffic IN or incoming direction
+f#FF0049 bold       Traffic OUT or outgoing direction
+
+
+
+TO-DO
+Continue with Arista Interfaces cat arista_int.txt | ct
+
+
+
+arista_int.txt      (Done)
+arista_int_description.txt
+bgp_arista.txt
+fw_rules.txt
+interfaces.txt
+sh_ip_route_arista.txt
+sh_run_arista.txt
