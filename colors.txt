@@ -7,7 +7,7 @@ f#ff0000 bold       Total Red Deny on security policies
 
 
 Light Blue
-f#00D1DB bold       For any IPv4 and description on security policies
+f#00D1DB bold       For any IPv4 and description on security policies / description
 
 
 Dark Blue
@@ -26,22 +26,7 @@ f#F701FF bold       security policies (Application)
 
 
 General
-f#6CFF00            Important Good messages - Interfaces/Vlan/Descriptions
+f#6CFF00            Important Good messages - Interfaces/Vlan
 f#ff0000 bold       Error messages or interfaces down, etc.
 f#00F969 bold       Traffic IN or incoming direction
 f#FF0049 bold       Traffic OUT or outgoing direction
-
-
-
-TO-DO
-Continue with Arista Interfaces cat arista_int.txt | ct
-
-
-
-arista_int.txt      (Done)
-arista_int_description.txt
-bgp_arista.txt
-fw_rules.txt
-interfaces.txt
-sh_ip_route_arista.txt
-sh_run_arista.txt
