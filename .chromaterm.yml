@@ -88,6 +88,13 @@ rules:
       color: f#FF0049 
 
 # show run
+
+    - description: Interfaces in shutdown 
+      regex: ((\s\sshutdown)|\s\sno shutdown)
+      color: 
+          1: f#6CFF00
+          2: f#ff0000 bold
+
     - description: route-map name 
       regex: (route-map\s[a-zA-Z0-9_-]+)
       color: f#00D1DB bold
@@ -122,7 +129,7 @@ rules:
 
 # Interfaces
     - description: show interfaces description (RED interfaces)
-      regex: (down|notpresent|lowerlayer|admin\sdown)
+      regex: (\s\s\sdown|notpresent|lowerlayer|admin\sdown)
       color: f#ff0000 bold
 
     - description: show interfaces description (GREEN Interface name)
@@ -132,6 +139,11 @@ rules:
     - description: show run (To match inteface... ET VLAN, ETC) 
       regex: ^interface.*
       color: f#6CFF00
+
+    - description: show run (To match vrf forwarding name) (Green Light) 
+      regex: \s\svrf forwarding (.*)$
+      color: 
+          1: f#00F969
 
     - description: Interface - Physical status
       regex: ((^Ethernet[0-9]+ is up)|^Ethernet[0-9]+ is down)
