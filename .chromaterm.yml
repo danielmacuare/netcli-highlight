@@ -1,9 +1,6 @@
 ---
 rules:
-    - description: Identtify security policies with deny  
-      regex: deny$
-      color: f#ff0000 bold
-
+# GENERAL
     - description: Will color (username)@(devicename)>
       regex: (^\w*)@([a-zA-Z0-9\,\-]*>) 
       color: 
@@ -13,6 +10,11 @@ rules:
     - description: Ipv4s 
       regex: \b(?<!\.)((25[0-5]|(2[0-4]|[0-1]?\d)?\d)\.){3}(25[0-5]|(2[0-4]|[0-1]?\d)?\d)(/\d+)?(?!\.)\b 
       color: f#00D1DB bold
+
+    - description: Interface - Description 
+      regex: Description:\s.*
+      color: f#F701FF bold
+
 
 #JUNOS
 # SECURITY POLICIES
@@ -42,11 +44,11 @@ rules:
 
     - description: Security Policies - Application
       regex: (application [\/a-zA-Z0-9\._-]+)?
-      color: f#03DAC6 bold
+      color: f#F701FF bold
 
     - description: Security Policies - deny
       regex: deny$
-      color: f#FF0000 bold
+      color: f#FF0000 bold italic
 
     - description: Security Policies - log
       regex: (log [/a-zA-Z0-9\._-]+)?$
@@ -65,9 +67,6 @@ rules:
           1: f#FF0000 bold
           2: f#6CFF00
 
-    - description: Interface - Description 
-      regex: Description:\s[a-zA-Z0-9\s_\/"-]+$ 
-      color: f#6CFF00
 
     - description: Interface - Last Flapped 
       regex: Last flapped\s+:\s.*$ 
@@ -82,24 +81,103 @@ rules:
       color: f#FF0049 bold
 
 
-## ARISTA
+## ARISTA / CISCO
 # General
     - description: Cisco MAC Address Notation 
       regex: ([0-9a-f]{4}\.[0-9a-f]{4}\.[0-9a-f]{4}).*
       color: f#FF0049 
 
+# show run
+    - description: route-map name 
+      regex: (route-map\s[a-zA-Z0-9_-]+)
+      color: f#00D1DB bold
+
+    - description: route-map permit (green) or deny(red) 
+      regex: \s(permit)|(deny)\s
+      color:
+          1: f#6CFF00
+          2: f#ff0000 bold
+
+    - description: route-map permit seq number 
+      regex: \s(permit|deny)\s([0-9]+)$
+      color:
+          2: f#00D1DB bold 
+
+    - description: route-map set clauses
+      regex: \s\sset .*
+      color: f#00F969
+
+    - description: prefix-list name (Purple) 
+      regex: (prefix-list\s[a-zA-Z0-9_-]+)
+      color: f#F701FF bold
+
+
+    - description: prefix-list Matching prefixes eq|gre (Light Green) 
+      regex: \s(eq.*|ge.*) 
+      color: f#00F969
+
+    - description: ip access-list Name (Purple)
+      regex: ip access-list ([a-zA-Z0-9_-]+)
+      color: f#F701FF bold
 
 # Interfaces
+    - description: show interfaces description (RED interfaces)
+      regex: (down|notpresent|lowerlayer|admin\sdown)
+      color: f#ff0000 bold
+
+    - description: show interfaces description (GREEN Interface name)
+      regex: (Et[0-9]+|Lo[0-9]|Ma[0-9]|Po[0-9]+|Vl[0-9]+)
+      color: f#6CFF00
+
+    - description: show run (To match inteface... ET VLAN, ETC) 
+      regex: ^interface.*
+      color: f#6CFF00
+
     - description: Interface - Physical status
       regex: ((^Ethernet[0-9]+ is up)|^Ethernet[0-9]+ is down)
       color:
           1: f#ff0000 bold
           2: f#6CFF00
 
-    - description: Interface - Line Protocol 
+    - description: Interface - Line Protocol Up(Green) Down|lowerl (Red)
       regex: ((line protocol is down.*$)|(line protocol is lowerlayerdown.*$)|line protocol is up.*$)
       color:
           1: f#6CFF00
           2: f#ff0000 bold
           3: f#ff0000 bold
 
+    - description: Interface - Last time it went Up (Green) or Down (Red)
+      regex: (^\s\sUp\s.*)|(^\s\sDown\s.*) 
+      color:
+          1: f#6CFF00
+          2: f#ff0000 bold
+
+
+# show ip bgp summary
+
+    - description: Matches not Establ bgp neighborships (Red) 
+      regex: ((Idle)|(Active)|(Connect)|(Estab)) 
+      color:
+          1: f#6CFF00  
+          2: f#ff0000 bold
+          3: f#ff0000 bold
+          4: f#ff0000 bold
+
+    - description: show ip bgp summary Local AS Number (Purple)
+      regex: \slocal AS number ([0-9].*)$
+      color: 
+          1: f#F701FF bold
+
+    - description: show ip bgp VRF NAME (Green)
+      regex: ^BGP summary information for (VRF .*)$ 
+      color: 
+          1: f#00F969
+
+    - description: show ip route VRF NAME (Green)
+      regex: '^VRF name: .*'
+      color: f#00F969
+
+    - description: show ip route Interface NAME (Green)
+      regex: ', (Vlan[0-9]+$|Ethernet[0-9]+$)'
+      color: 
+          1: f#6CFF00
