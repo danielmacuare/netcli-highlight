@@ -29,23 +29,23 @@ If you have ever used the CLI on network devices, you probably have ended up fru
 
 If you are like me, fascinated by the concept of **marginal gains**, this guide will help you to work more efficiently in the CLI.
 
-The purpose of this repo is to give you an idea of the power of having a syntax highlighting while working on live devices. This is not by any means a full-blown syntax highlighting solution but a way to show you how you can take advantage of it and adapt it to your needs.
+The purpose of this repo is to give you an idea of the power of having syntax highlighting while working on live devices. This is not by any means a full-blown syntax highlighting solution but a way to show you how you can take advantage of it and adapt it to your needs.
 
 **Note: The default color code has been tested using a Dark terminal Background as you can see in the images above**
 
 ## Use-cases
-- Reading Firewall Rules (JunOS)
+- **Reading Firewall Rules (JunOS)**
 ![Junos Colored FW Rule](resources/Junos_Sec_Pol-Colored.png)
-- Reading show ip bgp summary (Cisco / Arista)
+- **Reading show ip bgp summary (Cisco / Arista)**
 ![Show ip bgp summary](resources/show_ip_bgp_summary.png)
 
-- Reading show interfaces (Cisco / Arista / JunOS)
+- **Reading show interfaces (Cisco / Arista / JunOS)**
 ![Show interfaces](resources/show_int.png)
 
-- Reading route-maps (Cisco / Arista)
+- **Reading route-maps (Cisco / Arista)**
 ![Show route-map](resources/show_ip_rmap.png)
 
-- Reading Prefix lists (Cisco / Arista)
+- **Reading Prefix lists (Cisco / Arista)**
 ![Show pref-list](resources/show_ip_pref.png)
 
 
