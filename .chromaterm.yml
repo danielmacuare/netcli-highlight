@@ -137,7 +137,7 @@ rules:
 
 # Interfaces
     - description: show interfaces description. Interface status in (Red)
-      regex: (\s\s\sdown|notpresent|lowerlayer|admin\sdown)
+      regex: (\s\s\sdown|notpresent|lowerlayerdown|admin\sdown)
       color: f#ff0000 bold
 
     - description: show interfaces description - Interface name (Bright Green)
@@ -160,7 +160,7 @@ rules:
           2: f#6CFF00
 
     - description: Interface - Line Protocol Up(Bright Green) Down|lowerl (Red)
-      regex: ((line protocol is down.*$)|(line protocol is lowerlayerdown.*$)|line protocol is up.*$)
+      regex: ((line protocol is down.*$)|(line protocol is lowerlayer.*)|line protocol is up.*$)
       color:
           1: f#6CFF00
           2: f#ff0000 bold
@@ -175,7 +175,7 @@ rules:
 
 # show ip bgp summary
     - description: Matches not Established bgp states (Red)
-      regex: ((Idle.*)|(Active)|(Connect)|(Estab)) 
+      regex: ((Idle.*)|(Active)|(Connect)|(Estab[l]?)) 
       color:
           1: f#6CFF00  
           2: f#ff0000 bold
