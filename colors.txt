@@ -13,15 +13,15 @@ f#00D1DB bold       For any IPv4 and description on security policies / descript
 Dark Blue
 f#00D1DB bold       For my device on username@device>
 
-(Light Green)
+Light Green         (Light Green)
 f#00DF3A            For my username on username@device>
 f#00F969            from-zone + source-address on security policies
 
-Bright Green
+Bright Green        (Bright Green)
 f#6CFF00            policies on security policies
 
 
-Purple
+Purple              (Purple)
 f#F701FF bold       security policies (Application)
 
 
