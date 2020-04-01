@@ -1,5 +1,5 @@
 # netcli-highlight
-**TLDR:** This repo will show you how to use syntax highlighting on Live Network Devices. (Juniper/Cisco/Arista)
+**TLDR:** This repo will show you how to use syntax highlighting on Live Network devices. (Juniper/Cisco/Arista)
 
 
 ## TOC
@@ -50,25 +50,24 @@ The purpose of this repo is to give you an idea of the power of having syntax hi
 
 
 ## Benefits
-- Quicker troubleshooting as you can easily identify missconfigurations or things like interfaces down.
+- Quicker troubleshooting as you can easily identify missconfigurations or issues like interfaces down.
 
 - Color codes can be totally customised to your liking. To see the available HTML color codes go [HERE](https://htmlcolorcodes.com/)
-- Regex canbe customised to adapt it to  your particular Network OS (NOS) and version.
+- Regex can be adapted to  your particular Network OS (NOS) and version.
 
 
 ## Pre-requisites
  - Python 3.7+ Recommended
- - [Chromaterm](https://github.com/hSaria/ChromaTerm) - A big shout out to **hSaria** for buliding this wonderful tool that even work with interactive applications such as ssh.
+ - [Chromaterm](https://github.com/hSaria/ChromaTerm) - A big shout out to **[hSaria](https://github.com/hSaria)** for buliding this wonderful tool that even work with interactive applications such as ssh.
 
 
 ## Usage
 - Install the following package: `pip3 install chromaterm`
 - Copy the config file to your home dir: `cp .chromaterm.yml ~/.chromaterm.yml`
-- If you use **bash** as your shell: `echo "ssh() { /usr/bin/ssh "$@" | ct; }" > ~/.bash_profile`
-- If you use **zsh** as your shell: `echo "ssh() { /usr/bin/ssh "$@" | ct; }" > ~/.zshrc`
-- To test, use one of the following examples provided in the test folder. For example: `cat tests/arista_pref_list.txt | ct`
+- If you use **bash** as your shell, issue: `echo "ssh() { /usr/bin/ssh "$@" | ct; }" > ~/.bash_profile`
+- If you use **zsh** as your shell, issue: `echo "ssh() { /usr/bin/ssh "$@" | ct; }" > ~/.zshrc`
+- To test, use one of the following examples provided in the test folder and pipe it to chromaterm. For example: `cat tests/arista_pref_list.txt | ct`
 - Last, connect to a Juniper / Arista / Cisco and issue a `show interfaces`
-
 
 
 ## Limitations
