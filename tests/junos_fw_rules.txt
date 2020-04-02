@@ -1,0 +1,18 @@
+mdaniel@LAS4-XX-COREFW5600-CL1> show configuration security policies | display set
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcBS_TRUST_UNTRUST description "Webhooks SCM to Servers (Mob"
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcBS_TRUST_UNTRUST match source-address HG_LHR4_RC_PROD_10_100
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcBS_TRUST_UNTRUST match destination-address HG_AMS4_RC_CORP_DC
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcBS_TRUST_UNTRUST match application HG_AMS4_RC_CORP_DC2_PORTS
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcBS_TRUST_UNTRUST then permit
+set security policies from-zone TRUST to-zone UNTRUST policy P_dccr_TRUST_UNTRUST match source-address HG_LHR4_RC_DEV_LDAP_72
+set security policies from-zone TRUST to-zone UNTRUST policy P_dccr_TRUST_UNTRUST match destination-address HG_AMS4_RC_CORP_BG_DC
+set security policies from-zone TRUST to-zone UNTRUST policy P_dccr_TRUST_UNTRUST match application HG_TEST_PORTS
+set security policies from-zone TRUST to-zone UNTRUST policy P_dccr_TRUST_UNTRUST then permit
+set security policies from-zone TRUST to-zone UNTRUST policy P_dccq_TRUST_UNTRUST match source-address HG_LHR4_RC_DEV_LDAP_72
+set security policies from-zone TRUST to-zone UNTRUST policy P_dccq_TRUST_UNTRUST match destination-address HG_AWS_PROD
+set security policies from-zone TRUST to-zone UNTRUST policy P_dccq_TRUST_UNTRUST match application HG_AWS_PORTS
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcLx_TRUST_UNTRUST match source-address HG_LHR4_RC_DEV_LDAP_72
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcLx_TRUST_UNTRUST match destination-address HG_AWS_PROD
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcLx_TRUST_UNTRUST match application HG_AWS_PORTS
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcLx_TRUST_UNTRUST then deny
+set security policies from-zone TRUST to-zone UNTRUST policy P_dcLx_TRUST_UNTRUST then log session-init

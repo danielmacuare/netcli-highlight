@@ -68,7 +68,7 @@ The purpose of this repo is to give you an idea of the power of having syntax hi
 - Copy the config file to your home dir: `cp .chromaterm.yml ~/.chromaterm.yml`
 - If you use **bash** as your shell, issue: `echo 'ssh() { /usr/bin/ssh "$@" | ct; }' >> ~/.bash_profile`
 - If you use **zsh** as your shell, issue: `echo 'ssh() { /usr/bin/ssh "$@" | ct; }' >> ~/.zshrc`
-- To test, Open a new windown in you terminal and use one of the following examples provided in the test/ folder and pipe it to chromaterm. For example: `cat tests/arista_pref_list.txt | ct`
+- To test, open a new window in you terminal, use one of the following examples provided in the test/ folder and pipe it to chromaterm. For example: `cat tests/arista_pref_list.txt | ct`
 - Last, connect to a `Juniper|Arista|Cisco` via ssh and issue a `show interfaces`
 
 

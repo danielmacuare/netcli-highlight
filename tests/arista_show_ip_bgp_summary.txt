@@ -1,0 +1,32 @@
+FRK4-XX-DIST7060-01#show ip bgp summary vrf PROD-VRF
+BGP summary information for VRF PROD-VRF
+Router identifier 10.114.1.25, local AS number 64804
+Neighbor Status Codes: m - Under maintenance
+  Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State  PfxRcd PfxAcc
+  10.115.1.100     4  4207411111         0         0    0    0  250d06h Idle(NoIf)
+  10.115.2.100     4  4207471112         0         0    0    0   40d06h Idle(NoIf)
+  10.104.0.70      4  64800       19798397  19800278    0    0  687d03h Estab  100    100
+  10.104.0.201     4  64800        1071103    983033    0    0  341d07h Estab  5      5
+  10.104.1.161     4  65100       21741366  19788387    0    0    4d08h Estab  5      3
+
+
+FRK4-XX-DIST7060-01#show ip bgp summary vrf DEV-VRF
+BGP summary information for VRF DEV-VRF
+Router identifier 10.104.1.25, local AS number 64804
+Neighbor Status Codes: m - Under maintenance
+  Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State  PfxRcd PfxAcc
+  10.115.1.104     4  4207476837      3738      3525    0    0  258d08h Idle
+  10.115.2.104     4  4207476838      2782      2659    0    0  246d08h Active
+  10.104.0.237     4  65160        1128046   1028758    0    0   29d03h Connect  1      1
+  10.104.2.47      4  65097       11960211  11960208    0    0  415d05h Estab  104    103
+
+
+FRK4-XX-DIST7060-01#show ip bgp summary vrf GCP-VRF
+BGP summary information for VRF GCP-VRF
+Router identifier 10.152.126.152, local AS number 65096
+Neighbor Status Codes: m - Under maintenance
+  Neighbor         V  AS           MsgRcvd   MsgSent  InQ OutQ  Up/Down State  PfxRcd PfxAcc
+  10.115.1.108     4  4207476837      3704      3459    0    0  262d19h Active
+  10.115.2.108     4  4207476838      2781      2668    0    0  250d19h Active
+  10.104.0.217     4  64004        1069279    981479    0    0  340d17h Estab  2      2
+  10.104.0.233     4  65060        1141957   1041576    0    0   33d15h Estab  1      1

@@ -1,0 +1,25 @@
+FRK4-XX-DIST7060-02# show run | sec prefix-list
+ip prefix-list XX_DC-CORP
+   seq 10 permit 10.135.108.0/17 eq 17
+
+ip prefix-list HGK4-XX-CORP-PREFIXES
+   seq 10 permit 10.105.0.0/16 ge 22
+
+ip prefix-list DENY
+   seq 9999 deny 0.0.0.0/0 le 32
+!
+ip prefix-list HGK-ANYCAST-RANGE
+   seq 1 permit 10.105.3.0/24 ge 32
+!
+ip prefix-list DEV_GW_ANYCAST_ADDRESSES
+   seq 10 permit 10.105.3.0/24 eq 32
+!
+
+ip prefix-list LHR4-XX-PROD-VLANS
+   seq 10 permit 10.104.0.0/16 eq 24
+   seq 21 permit 10.40.0.0/17 ge 17
+   seq 60 permit 10.144.0.0/16 eq 22
+   seq 70 permit 10.145.0.0/16 ge 16
+   seq 80 permit 10.147.2.44/30
+   seq 90 permit 10.144.0.204/31
+   seq 100 permit 10.146.0.0/16 ge 22

@@ -1,0 +1,34 @@
+mdaniel@LAS4-XX-MX204-01>
+route-map L3VPN-0010-RC-PROD-OUTBOUND permit 10
+   match ip address prefix-list AWS-PROD-PREFIXES
+   set community 65010:401 additive
+!
+route-map L3VPN-0010-RC-PROD-OUTBOUND permit 20
+   match ip address prefix-list AZURE-CORP-PREFIXES
+   set community 65010:401 additive
+!
+route-map L3VPN-0010-RC-PROD-OUTBOUND permit 30
+   match ip address prefix-list XX-PROD-PREFIXES
+   set community 65010:401 additive
+!
+route-map L3VPN-0010-RC-PROD-OUTBOUND permit 50
+   match ip address prefix-list LAS4-ANYCAST-RANGES
+   set community 65010:401 additive
+!
+route-map L3VPN-0010-RC-PROD-OUTBOUND permit 60
+   match ip address prefix-list XX-OFFICE-PREFIXES
+   set community 65010:401 additive
+!
+route-map L3VPN-0010-RC-PROD-OUTBOUND permit 70
+   match ip address prefix-list XX-CLOUD-AWS-PROD
+   set community 65010:401 additive
+!
+route-map L3VPN-0010-RC-PROD-OUTBOUND permit 80
+   match ip address prefix-list RFC1918
+   set community 65010:401 additive
+!
+route-map L3VPN-0010-RC-PROD-OUTBOUND permit 90
+   match ip address prefix-list XX-PC-LOOPBACKS
+!
+route-map L3VPN-3011-RC-PROD-OUTBOUND deny 999
+   match ip address prefix-list DENY

@@ -1,0 +1,148 @@
+FRK4-XX-DIST7060-02# show interfaces
+Ethernet1 is up, line protocol is down (disabled) 
+  Hardware is Ethernet, address is 001c.734d.507a (bia 001c.734d.507a)
+  Description: Server-11
+  Ethernet MTU 9214 bytes , BW 10000000 kbit
+  Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
+  Up 115 days, 7 hours, 2 minutes, 22 seconds
+  Loopback Mode : None
+  76 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 205 Mbps (2.1% with framing overhead), 58470 packets/sec
+  5 minutes output rate 179 Mbps (1.9% with framing overhead), 51133 packets/sec
+     2431835380837 packets input, 1259946093941171 bytes
+     Received 7730484 broadcasts, 4983542 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     1290522299 PAUSE input
+     3558506534334 packets output, 1170707103998468 bytes
+     Sent 1759602687 broadcasts, 200240498 multicast
+     0 output errors, 0 collisions
+     0 late collision, 0 deferred, 2 output discards
+     0 PAUSE output
+Ethernet2 is up, line protocol is lowerlayerdown (notconnect) 
+  Hardware is Ethernet, address is 001c.734d.507b (bia 001c.734d.507b)
+  Description: Server-13
+  Ethernet MTU 9214 bytes , BW 10000000 kbit
+  Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
+  Up 140 days, 3 hours, 28 minutes, 59 seconds
+  Loopback Mode : None
+  64 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 204 Mbps (2.1% with framing overhead), 62445 packets/sec
+  5 minutes output rate 177 Mbps (1.8% with framing overhead), 50148 packets/sec
+     2378018975554 packets input, 1213632351446660 bytes
+     Received 7638368 broadcasts, 2975856 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     3761963424 PAUSE input
+     2981585405219 packets output, 1129466489406975 bytes
+     Sent 1759618613 broadcasts, 202825381 multicast
+     0 output errors, 0 collisions
+     0 late collision, 0 deferred, 1 output discards
+     0 PAUSE output
+Ethernet3 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is 001c.734d.507c (bia 001c.734d.507c)
+  Description: AMS4-XX-TES5100-10_xe-0/1/0
+  Ethernet MTU 9214 bytes , BW 10000000 kbit
+  Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
+  Up 315 days, 9 hours, 59 minutes, 55 seconds
+  Loopback Mode : None
+  15 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 103 Mbps (1.1% with framing overhead), 16716 packets/sec
+  5 minutes output rate 17.1 Mbps (0.2% with framing overhead), 13671 packets/sec
+     1504047867050 packets input, 1248163759386021 bytes
+     Received 32553812 broadcasts, 48714462 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     1586449658850 packets output, 701277095264343 bytes
+     Sent 812643798 broadcasts, 137690114 multicast
+     24 output errors, 0 collisions
+     0 late collision, 0 deferred, 3 output discards
+     0 PAUSE output
+Ethernet4 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is 001c.734d.507d (bia 001c.734d.507d)
+  Description: FRK4-XX-TEST5110-08_xe-0/1/2
+  Ethernet MTU 9214 bytes , BW 10000000 kbit
+  Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
+  Up 315 days, 10 hours, 9 minutes, 24 seconds
+  Loopback Mode : None
+  11 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 36.4 Mbps (0.4% with framing overhead), 6147 packets/sec
+  5 minutes output rate 10.2 Mbps (0.1% with framing overhead), 5257 packets/sec
+     1726457698357 packets input, 1246780189316788 bytes
+     Received 4691584 broadcasts, 4726693 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     1905595442088 packets output, 887522129648392 bytes
+     Sent 729939655 broadcasts, 86079561 multicast
+     10314 output errors, 0 collisions
+     0 late collision, 0 deferred, 2 output discards
+     0 PAUSE output
+Ethernet5 is down, line protocol is down (notconnect)
+  Hardware is Ethernet, address is 001c.734d.507e (bia 001c.734d.507e)
+  Description: LAS4-XX-CMSMS3850-01_xe-0/1/0
+  Ethernet MTU 9214 bytes , BW 10000000 kbit
+  Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
+  Down 111 days, 2 hours, 47 minutes, 8 seconds
+  Loopback Mode : None
+  6 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 0 bps (0.0% with framing overhead), 0 packets/sec
+  5 minutes output rate 0 bps (0.0% with framing overhead), 0 packets/sec
+     133786882425 packets input, 75743080506686 bytes
+     Received 1107325078 broadcasts, 146139379 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     149457674527 packets output, 51478553142513 bytes
+     Sent 15075569711 broadcasts, 635547215 multicast
+     1 output errors, 0 collisions
+     0 late collision, 0 deferred, 0 output discards
+     0 PAUSE output
+Ethernet6 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is 001c.734d.507f (bia 001c.734d.507f)
+  Description: AWS Ireland - Level 3 Equinix XX-AMK
+  Ethernet MTU 9214 bytes , BW 1000000 kbit
+  Full-duplex, 1Gb/s, auto negotiation: off, uni-link: n/a
+  Up 37 days, 18 hours, 48 minutes, 26 seconds
+  Loopback Mode : None
+  12 link status changes since last clear
+  Last clearing of "show interface" counters 492 days, 8:40:37 ago
+  5 minutes input rate 54.5 Mbps (5.7% with framing overhead), 13815 packets/sec
+  5 minutes output rate 33.1 Mbps (3.5% with framing overhead), 9438 packets/sec
+     1155883429410 packets input, 771312727389206 bytes
+     Received 733701 broadcasts, 29014473 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     733553193815 packets output, 405330934280880 bytes
+     Sent 11540477654 broadcasts, 641623805 multicast
+     3 output errors, 0 collisions
+     0 late collision, 0 deferred, 10526996 output discards
+     0 PAUSE output
+Ethernet7 is up, line protocol is up (connected)
+  Hardware is Ethernet, address is 001c.734d.5080 (bia 001c.734d.5080)
+  Description: HG5-XX-TEST7060-10 Et10
+  Ethernet MTU 9214 bytes , BW 10000000 kbit
+  Full-duplex, 10Gb/s, auto negotiation: off, uni-link: n/a
+  Up 75 days, 3 hours, 46 minutes, 29 seconds
+  Loopback Mode : None
+  20 link status changes since last clear
+  Last clearing of "show interface" counters never
+  5 minutes input rate 3.33 kbps (0.0% with framing overhead), 1 packets/sec
+  5 minutes output rate 3.43 kbps (0.0% with framing overhead), 3 packets/sec
+     11616134141 packets input, 2760317766775 bytes
+     Received 41855 broadcasts, 0 multicast
+     0 runts, 0 giants
+     0 input errors, 0 CRC, 0 alignment, 0 symbol, 0 input discards
+     0 PAUSE input
+     9793960828 packets output, 7270614840991 bytes
+     Sent 58446 broadcasts, 32520277 multicast
+     0 output errors, 0 collisions
+     0 late collision, 0 deferred, 1 output discards
+     0 PAUSE output

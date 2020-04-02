@@ -1,0 +1,172 @@
+FRK4-XX-DIST7060-01#show ip route
+
+VRF name: default
+Codes: C - connected, S - static, K - kernel,
+       O - OSPF, IA - OSPF inter area, E1 - OSPF external type 1,
+       E2 - OSPF external type 2, N1 - OSPF NSSA external type 1,
+       N2 - OSPF NSSA external type2, B I - iBGP, B E - eBGP,
+       R - RIP, I L1 - ISIS level 1, I L2 - ISIS level 2,
+       A B - BGP Aggregate, A O - OSPF Summary,
+       NG - Nexthop Group Static Route, V - VXLAN Control Service
+
+Gateway of last resort:
+ B E    0.0.0.0/0 [100/0] via 10.194.1.161, Vlan4000
+
+ S      10.100.0.0/16 [1/0] via 10.194.0.201, Vlan133
+ S      10.101.0.0/16 [1/0] via 10.194.0.201, Vlan133
+ B I    10.105.1.102/31 [200/0] via 10.194.0.70, Vlan121
+ B I    10.105.4.18/31 [200/0] via 10.194.0.70, Vlan121
+ B E    10.105.132.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.133.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.134.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.136.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.140.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.144.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.146.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.148.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.152.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.156.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.158.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.160.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.162.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.163.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.164.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.105.208.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.140.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.144.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.146.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.148.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.152.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.156.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.158.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.160.0/23 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.163.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.128.0/18 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.106.208.0/22 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.107.1.216/32 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.107.1.217/32 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.107.10.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.107.128.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.107.130.0/24 [100/0] via 10.102.106.145, Ethernet12
+ B E    10.107.150.0/24 [100/0] via 10.102.106.145, Ethernet12
+ O      10.108.0.9/32 [110/10] via 10.194.0.190, Vlan131
+ O E2   10.108.0.10/32 [110/0] via 10.194.0.190, Vlan131
+ O E2   10.108.0.0/18 [110/0] via 10.194.0.190, Vlan131
+ B I    10.108.128.0/17 [200/0] via 10.194.0.201, Vlan133
+ C      10.194.0.68/30 is directly connected, Vlan121
+ C      10.194.0.188/30 is directly connected, Vlan131
+ O      10.194.0.192/30 [110/110] via 10.194.0.190, Vlan131
+ C      10.194.0.200/31 is directly connected, Vlan133
+ C      10.194.0.208/31 is directly connected, Ethernet11
+ O      10.194.0.210/31 [110/1110] via 10.194.0.190, Vlan131
+ C      10.194.0.212/31 is directly connected, Vlan246
+ O      10.194.0.214/31 [110/120] via 10.194.0.190, Vlan131
+ O      10.194.1.4/32 [110/1000] via 10.194.0.209, Ethernet11
+ C      10.194.1.25/32 is directly connected, Loopback0
+ O      10.194.1.26/32 [110/120] via 10.194.0.190, Vlan131
+ C      10.194.1.160/30 is directly connected, Vlan4000
+ C      10.194.1.176/30 is directly connected, Vlan3001
+ C      10.194.1.212/31 is directly connected, Vlan1000
+ B I    10.194.1.216/32 [200/0] via 10.194.1.218, Vlan138
+ B I    10.194.1.217/32 [200/0] via 10.194.1.222, Vlan140
+ C      10.194.1.218/31 is directly connected, Vlan138
+ C      10.194.1.222/31 is directly connected, Vlan140
+ B E    10.194.4.0/28 [100/0] via 10.194.1.161, Vlan4000
+ B E    10.194.4.16/28 [100/0] via 10.194.1.161, Vlan4000
+ B I    10.194.10.0/24 [200/0] via 10.194.1.218, Vlan138
+ B E    10.194.16.0/24 [100/0] via 10.102.106.145, Ethernet12
+ C      10.194.62.0/24 is directly connected, Vlan254
+ C      10.194.82.0/24 is directly connected, Vlan82
+ C      10.194.100.0/24 is directly connected, Vlan100
+ C      10.194.102.0/24 is directly connected, Vlan102
+ C      10.194.103.0/24 is directly connected, Vlan103
+ C      10.194.105.0/24 is directly connected, Vlan105
+ C      10.194.110.0/24 is directly connected, Vlan110
+ C      10.194.112.0/24 is directly connected, Vlan112
+ C      10.194.114.0/24 is directly connected, Vlan114
+ C      10.194.116.0/24 is directly connected, Vlan116
+ B I    10.194.128.0/24 [200/0] via 10.194.1.218, Vlan138
+ B I    10.194.130.0/24 [200/0] via 10.194.1.218, Vlan138
+ C      10.194.132.0/22 is directly connected, Vlan401
+ C      10.194.136.0/22 is directly connected, Vlan402
+ C      10.194.140.0/22 is directly connected, Vlan403
+ C      10.194.144.0/22 is directly connected, Vlan404
+ B I    10.194.150.0/24 [200/0] via 10.194.1.218, Vlan138
+ O      10.194.174.0/24 [110/1001] via 10.194.0.209, Ethernet11
+ O E2   10.194.175.200/32 [110/0] via 10.194.0.209, Ethernet11
+ O      10.194.200.0/24 [110/1001] via 10.194.0.209, Ethernet11
+ C      10.194.206.0/24 is directly connected, Vlan206
+ C      10.194.208.0/24 is directly connected, Vlan208
+ C      10.194.210.0/24 is directly connected, Vlan210
+ C      10.194.212.0/24 is directly connected, Vlan212
+ C      10.194.220.0/24 is directly connected, Vlan220
+ C      10.194.221.0/24 is directly connected, Vlan221
+ C      10.194.230.0/24 is directly connected, Vlan230
+ C      10.194.231.0/24 is directly connected, Vlan231
+ C      10.194.242.0/24 is directly connected, Vlan242
+ C      10.194.243.0/24 is directly connected, Vlan243
+ C      10.194.244.0/24 is directly connected, Vlan244
+ C      10.194.245.0/24 is directly connected, Vlan245
+ S      10.194.0.0/16 is directly connected, Null0
+ C      10.185.2.252/30 is directly connected, Vlan999
+ S      10.185.207.0/24 [1/0] via 10.194.0.201, Vlan133
+ S      10.185.0.0/16 [1/0] via 10.194.0.201, Vlan133
+ O      10.187.2.40/30 [110/120] via 10.194.0.190, Vlan131
+ C      10.187.2.44/30 is directly connected, Vlan132
+ B E    10.104.1.0/24 [100/0] via 169.254.254.21, Vlan2000
+ B E    10.104.3.0/24 [100/0] via 169.254.254.25, Vlan2001
+ B E    10.104.5.0/24 [100/0] via 169.254.254.37, Vlan2003
+ B E    10.104.6.0/24 [100/0] via 169.254.254.53, Vlan2008
+ B E    10.104.8.0/22 [100/0] via 169.254.254.61, Vlan2009
+ B E    10.104.12.0/23 [100/0] via 169.254.254.65, Vlan2013
+ B E    10.104.14.0/24 [100/0] via 169.254.254.85, Vlan2017
+ B E    10.104.15.0/24 [100/0] via 169.254.254.89, Vlan2018
+ A B    10.104.0.0/17 is directly connected, Null0
+ B I    10.104.192.0/22 [200/0] via 10.194.0.70, Vlan121
+ B I    10.104.196.0/22 [200/0] via 10.194.0.70, Vlan121
+ B I    10.104.224.0/22 [200/0] via 10.194.0.70, Vlan121
+ B I    10.104.232.0/22 [200/0] via 10.194.0.70, Vlan121
+ B E    10.9.64.0/18 [100/0] via 169.254.254.97, Vlan2020
+ B I    10.9.128.0/19 [200/0] via 10.194.0.70, Vlan121
+ B I    10.9.192.0/19 [200/0] via 10.194.0.70, Vlan121
+ B E    10.11.192.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.193.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.194.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.195.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.196.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.208.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.209.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.210.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.211.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.212.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.213.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.224.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.225.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.226.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.227.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.228.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.229.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.11.224.0/20 [100/0] via 10.187.2.46, Vlan132
+ B E    10.102.10.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.102.10.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.102.20.0/24 [100/0] via 10.187.2.46, Vlan132
+ B E    10.102.20.0/24 [100/0] via 10.187.2.46, Vlan132
+ C      10.102.106.144/31 is directly connected, Ethernet12
+ B I    10.0.0.0/8 [200/0] via 10.194.0.201, Vlan133
+ C      169.254.254.0/30 is directly connected, Vlan400
+ C      169.254.254.20/30 is directly connected, Vlan2000
+ C      169.254.254.24/30 is directly connected, Vlan2001
+ C      169.254.254.36/30 is directly connected, Vlan2003
+ C      169.254.254.52/30 is directly connected, Vlan2008
+ C      169.254.254.60/30 is directly connected, Vlan2009
+ C      169.254.254.64/30 is directly connected, Vlan2013
+ C      169.254.254.80/30 is directly connected, Vlan2016
+ C      169.254.254.84/30 is directly connected, Vlan2017
+ C      169.254.254.88/30 is directly connected, Vlan2018
+ C      169.254.254.96/30 is directly connected, Vlan2020
+ S      172.16.0.0/24 [1/0] via 10.194.0.201, Vlan133
+ S      172.21.0.0/16 [1/0] via 10.194.0.201, Vlan133
+ B I    172.16.0.0/12 [200/0] via 10.194.0.201, Vlan133
+ S      192.168.199.0/24 [1/0] via 10.194.0.201, Vlan133
+ B I    192.168.0.0/16 [200/0] via 10.194.0.201, Vlan133
+
