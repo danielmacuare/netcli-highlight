@@ -1,7 +1,7 @@
 ---
 rules:
 # GENERAL
-    - description: Will color (username)@(devicename)>   (Green Light) (Light Blue)
+    - description: For your (username)@(devicename)>   (Green Light) (Light Blue)
       regex: (^\w*)@([a-zA-Z0-9\,\-]*>) 
       color: 
           1: f#00DF3A
