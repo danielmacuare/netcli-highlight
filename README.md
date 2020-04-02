@@ -15,7 +15,7 @@
 
 
 ## What's this about?
-If you have ever used the CLI on network devices, you probably have ended up frustrated trying to make sense of the long lines of configuration. Although nowadays the use of editors like `vim/Sublime/Vscode/Atmom` can provide some really useful syntax highlighting, you still can find yourself struggling to read the config files or outputs while you are on live devices.
+If you have ever used the CLI on network devices, you probably have ended up frustrated trying to make sense of the long lines of configuration. Although nowadays the use of editors like `vim/Sublime/Vscode/Atom` can provide some really useful syntax highlighting, you still can find yourself struggling to read the config files or outputs while you are on live devices.
 
 <br/>
 
