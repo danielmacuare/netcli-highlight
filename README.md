@@ -1,5 +1,5 @@
 # netcli-highlight
-**TLDR:** This repo will show you how to use syntax highlighting on Live Network devices. (Juniper/Cisco/Arista)
+**TLDR:** This repo will help you to make use of syntax highlighting on Live Network devices. (Juniper/Cisco/Arista)
 
 
 ## TOC
