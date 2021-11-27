@@ -1,0 +1,18 @@
+switch#show rib route ipv6 bgp
+VRF name: default, VRF ID: 0xfe, Protocol: bgp
+Codes: C - Connected, S - Static, P - Route Input
+ B - BGP, O - Ospf, O3 - Ospf3, I - Isis
+ > - Best Route, * - Unresolved Nexthop
+ L - Part of a recursive route resolution loop
+ B2001:10:1::/64 [200/42]
+ via 2001:10:1::100 [0/1]
+via Ethernet1, directly connected
+>B2001:10:100::/64 [200/200]
+ via 2001:10:1::100 [0/1]
+via Ethernet1, directly connected
+>B2001:10:100:1::/64 [200/0]
+ via 2001:10:1::100 [0/1]
+via Ethernet1, directly connected
+>B2001:10:100:2::/64 [200/42]
+ via 2001:10:1::100 [0/1]
+via Ethernet1, directly connected
