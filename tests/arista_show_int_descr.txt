@@ -24,4 +24,3 @@ Po5                            admin down     down     "CONNECTION TO DEV1-XX-YY
 Po7                            down           lowerlayerdown "CONNECTION TO DEV1-XX-YY-02 AE7"
 Vl300                          down           lowerlayerdown
 Vl3001                         up             up
-

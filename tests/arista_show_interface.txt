@@ -1,5 +1,5 @@
 FRK4-XX-DIST7060-02# show interfaces
-Ethernet1 is up, line protocol is down (disabled) 
+Ethernet1 is up, line protocol is down (disabled)
   Hardware is Ethernet, address is 001c.734d.507a (bia 001c.734d.507a)
   Description: Server-11
   Ethernet MTU 9214 bytes , BW 10000000 kbit
@@ -20,7 +20,7 @@ Ethernet1 is up, line protocol is down (disabled)
      0 output errors, 0 collisions
      0 late collision, 0 deferred, 2 output discards
      0 PAUSE output
-Ethernet2 is up, line protocol is lowerlayerdown (notconnect) 
+Ethernet2 is up, line protocol is lowerlayerdown (notconnect)
   Hardware is Ethernet, address is 001c.734d.507b (bia 001c.734d.507b)
   Description: Server-13
   Ethernet MTU 9214 bytes , BW 10000000 kbit
