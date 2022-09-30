@@ -179,7 +179,7 @@ rules:
 
 # show ip bgp summary
   - description: Matches not Established bgp states (Red)
-    regex: ((Idle.*)|(Active)|(Connect)|(Estab[l]?))
+    regex: ((Idle.*)|(Active)|(Connect)|(Established[l]?)|(Estab[l]?))
     color:
       1: f#6CFF00
       2: f#ff0000 bold
