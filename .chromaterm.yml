@@ -201,6 +201,6 @@ rules:
     color: f#00F969
 
   - description: show ip route Interface NAME (Bright Green)
-    regex: ', (Vlan[0-9]+$|Ethernet[0-9]+$)'
+    regex: ', (Vlan[0-9]+$|Ethernet[0-9]+$|Loopback[0-9]+$|Management[1]+$)'
     color:
       1: f#6CFF00
