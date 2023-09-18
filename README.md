@@ -4,14 +4,13 @@
 
 ## TOC
 
-- [What's this about?](#what's-this-about?)
+- [What's this about?](#whats-this-about)
 - [Use-Cases](#use-cases)
 - [Benefits](#benefits)
 - [Pre-requisites](#pre-requisites)
 - [Usage](#usage)
-- [Purpose](#purpose)
 - [Limitations](#limitations)
-- [Thanks](#thanks)
+- [Thanks](#special-thanks)
 
 ## What's this about?
 
@@ -78,4 +77,4 @@ The purpose of this repo is to give you an idea of the power of having syntax hi
 
 ## Special Thanks
 
-Thanks to [hSaria](https://github.com/hSaria) for creating this fantastic tool [Chromaterm](https://github.com/hSaria/ChromaTerm).
+Thanks to [hSaria](https://github.com/hSaria) for creating [Chromaterm](https://github.com/hSaria/ChromaTerm) which is used as a based for this tool.
