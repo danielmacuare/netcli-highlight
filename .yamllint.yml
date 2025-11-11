@@ -1,2 +1,10 @@
----
-line-length: disable
+extends: default
+rules:
+    line-length: disable # Disabled to allow long regex patterns
+    document-start:
+        present: false # Matches yamlfmt's include_document_start: false
+    indentation: disable # yamlfmt handles indentation (uses 4 spaces base)
+    comments:
+        min-spaces-from-content: 1 # Matches yamlfmt's pad_line_comments: 1
+        require-starting-space: false # Allow inline comments without space
+    new-line-at-end-of-file: enable
