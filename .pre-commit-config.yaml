@@ -1,22 +1,20 @@
----
 repos:
-  - repo: https://github.com/pre-commit/pre-commit-hooks
-    rev: v3.4.0
-    hooks:
-      - id: trailing-whitespace
-      - id: end-of-file-fixer
-      - id: check-yaml
-  - repo: https://github.com/jumanjihouse/pre-commit-hook-yamlfmt
-    rev: 0.2.1
-    hooks:
-      - id: yamlfmt
-        args: [--mapping, '2', --sequence, '4', --offset, '2']
-  - repo: https://github.com/adrienverge/yamllint.git
-    rev: v1.32.0
-    hooks:
-      - id: yamllint
-        args: [--format, parsable, --strict]
-  - repo: https://github.com/igorshubovych/markdownlint-cli
-    rev: v0.36.0
-    hooks:
-      - id: markdownlint
+    - repo: https://github.com/pre-commit/pre-commit-hooks
+      rev: v6.0.0
+      hooks:
+        - id: trailing-whitespace
+        - id: end-of-file-fixer
+        - id: check-yaml
+    - repo: https://github.com/google/yamlfmt
+      rev: v0.20.0
+      hooks:
+        - id: yamlfmt
+    - repo: https://github.com/adrienverge/yamllint.git
+      rev: v1.37.1
+      hooks:
+        - id: yamllint
+          args: [--format, parsable, --strict]
+    - repo: https://github.com/igorshubovych/markdownlint-cli
+      rev: v0.45.0
+      hooks:
+        - id: markdownlint
