@@ -1,80 +1,182 @@
 # netcli-highlight
 
-**TLDR:** This repo will help you to make use of syntax highlighting on Live Network devices. (Juniper/Cisco/Arista)
+**TLDR:** Add syntax highlighting to your SSH sessions with live network devices (Juniper/Cisco/Arista).
 
-## TOC
+## Table of Contents
 
-- [What's this about?](#whats-this-about)
-- [Use-Cases](#use-cases)
+- [Overview](#overview)
+- [Examples](#examples)
 - [Benefits](#benefits)
-- [Pre-requisites](#pre-requisites)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
 - [Usage](#usage)
+- [Supported Platforms](#supported-platforms)
 - [Limitations](#limitations)
-- [Thanks](#special-thanks)
+- [Troubleshooting](#troubleshooting)
+- [Acknowledgments](#acknowledgments)
 
-## What's this about?
+## Overview
 
-If you have ever used the CLI on network devices, you probably have ended up frustrated trying to make sense of the long lines of configuration. Although nowadays the use of editors like `vim/Sublime/Vscode/Atom` can provide some really useful syntax highlighting, you still can find yourself struggling to read the config files or outputs while you are on live devices.
+If you've ever used the CLI on network devices, you've probably struggled to make sense of long configuration outputs. While editors like `vim`, `VSCode`, or `Sublime` provide syntax highlighting, reading config files or command outputs directly on live devices remains challenging.
 
-**Here we have a Juniper SRX firewall policy.** This rule is comprised by `source/destination/application/actions`, if you need to read one of them it's alright but if your output has you reading over 10 rules you can see how difficult is to differentiate each component.
+**Here's a Juniper SRX firewall policy without highlighting:**
 
 ![Junos FW Rule](resources/Junos_Sec_Pol.png)
 
-**Wouldn't be nice to have some live syntax highlight to differentiate each component and quickly find what you are looking for?** Something like...
+This rule contains `source/destination/application/actions` components. Reading one rule is manageable, but parsing through 10+ rules makes it difficult to differentiate each component.
+
+**With syntax highlighting:**
 
 ![Junos Colored FW Rule](resources/Junos_Sec_Pol-Colored.png)
 
-If you are like me, fascinated by the concept of **marginal gains**, this guide will help you to work more efficiently in the CLI.
+This repo demonstrates how to add real-time syntax highlighting to your SSH sessions with network devices. It's not a comprehensive solution, but a starting point you can customize to your needs.
 
-The purpose of this repo is to give you an idea of the power of having syntax highlighting while working on live devices. This is not by any means a full-blown syntax highlighting solution but a way to show you how you can take advantage of it and adapt it to your needs.
+**Note:** The default color scheme is optimized for dark terminal backgrounds.
 
-**Note:** The default color code has been tested using a Dark terminal Background as you can see in the images above
+## Examples
 
-## Use-cases
+### Firewall Rules (JunOS)
 
-- **Reading Firewall Rules (JunOS)**
 ![Junos Colored FW Rule](resources/Junos_Sec_Pol-Colored.png)
-- **Reading show ip bgp summary (Cisco / Arista)**
+
+### BGP Summary (Cisco / Arista)
+
 ![Show ip bgp summary](resources/show_ip_bgp_summary.png)
 
-- **Reading show interfaces (Cisco / Arista / JunOS)**
+### Interface Status (Cisco / Arista / JunOS)
+
 ![Show interfaces](resources/show_int.png)
 
-- **Reading route-maps (Cisco / Arista)**
+### Route Maps (Cisco / Arista)
+
 ![Show route-map](resources/show_ip_rmap.png)
 
-- **Reading Prefix lists (Cisco / Arista)**
+### Prefix Lists (Cisco / Arista)
+
 ![Show pref-list](resources/show_ip_pref.png)
 
 ## Benefits
 
-- Quicker troubleshooting as you can easily identify missconfigurations or issues like interfaces down.
+- **Faster troubleshooting** - Quickly identify misconfigurations or issues like downed interfaces
+- **Customizable colors** - Adapt color schemes to your preference using [HTML color codes](https://htmlcolorcodes.com/)
+- **Flexible patterns** - Modify regex patterns to match your specific Network OS (NOS) and version
 
-- Color codes can be totally customised to your liking. To see the available HTML color codes go [HERE](https://htmlcolorcodes.com/)
-- Regex can be adapted to  your particular Network OS (NOS) and version.
+## Prerequisites
 
-## Pre-requisites
+- Python 3.7 or higher
+- SSH access to network devices (Juniper/Cisco/Arista)
+- A terminal with color support
 
-- Python 3.7+ Recommended
-- [Chromaterm](https://github.com/hSaria/ChromaTerm) - A big shout out to **[hSaria](https://github.com/hSaria)** for buliding this wonderful tool that even work with interactive applications such as ssh.
+## Installation
+
+1. Clone this repository:
+
+   ```bash
+   git clone git@github.com:danielmacuare/netcli-highlight.git
+   cd netcli-highlight/
+   ```
+
+2. Install [ChromaTerm](https://github.com/hSaria/ChromaTerm) using one of these methods:
+
+   ```bash
+   # Via pip
+   pip install chromaterm
+
+   # Via uv (global tool)
+   uv tool install chromaterm
+
+   # Via uv (virtual environment)
+   uv pip install chromaterm
+   ```
+
+3. Copy the configuration file to your home directory:
+
+   ```bash
+   cp .chromaterm.yml ~/.chromaterm.yml
+   ```
+
+4. Configure your shell to pipe SSH through ChromaTerm:
+
+   **For bash:**
+
+   ```bash
+   echo 'ssh() { /usr/bin/ssh "$@" | ct; }' >> ~/.bash_profile
+   ```
+
+   **For zsh:**
+
+   ```bash
+   echo 'ssh() { /usr/bin/ssh "$@" | ct; }' >> ~/.zshrc
+   ```
+
+5. Reload your shell configuration or open a new terminal window.
 
 ## Usage
 
-- Clone this repo: `git clone git@github.com:danielmacuare/netcli-highlight.git`
-- Get inside the project: `cd netcli-highlight/`
-- Install the following package: `pip3 install chromaterm`
-- Copy the config file to your home dir: `cp .chromaterm.yml ~/.chromaterm.yml`
-- If you use **bash** as your shell, issue: `echo 'ssh() { /usr/bin/ssh "$@" | ct; }' >> ~/.bash_profile`
-- If you use **zsh** as your shell, issue: `echo 'ssh() { /usr/bin/ssh "$@" | ct; }' >> ~/.zshrc`
-- To test, open a new window in you terminal, use one of the following examples provided in the test/ folder and pipe it to chromaterm. For example: `cat tests/arista_pref_list.txt | ct`
-- Last, connect to a `Juniper|Arista|Cisco` via ssh and issue a `show interfaces`
+### Testing Locally
+
+Test the highlighting with the provided examples:
+
+```bash
+cat tests/arista_pref_list.txt | ct
+```
+
+### Using with Live Devices
+
+Connect to your network device via SSH and run any show command:
+
+```bash
+ssh user@device
+show interfaces
+show ip bgp summary
+show configuration
+```
+
+The output will automatically be highlighted based on the patterns in `~/.chromaterm.yml`.
+
+### Customizing Highlighting
+
+Edit `~/.chromaterm.yml` to:
+
+- Add new regex patterns for your specific commands
+- Modify colors (use [HTML color codes](https://htmlcolorcodes.com/))
+- Adjust patterns for different NOS versions
+
+Refer to the [ChromaTerm documentation](https://github.com/hSaria/ChromaTerm#highlight-rules) for configuration options.
+
+## Supported Platforms
+
+- **Network OS:** Juniper JunOS, Cisco IOS/IOS-XE/NX-OS, Arista EOS
+- **Operating Systems:** Linux, macOS, WSL on Windows
+- **Shells:** bash, zsh, and other POSIX-compatible shells
 
 ## Limitations
 
-- There are countless of NOS and versions so not all of them would probably work with [this config file](.chromaterm.yml) but you can easily modify it to filter the content you consider important and even customise the colors to your liking.
-- [This config file](.chromaterm.yml) has been tested with a limited amount of Juniper, Cisco and Arista devices.
-- For more information on the `chromaterm` config file options go [HERE](https://github.com/hSaria/ChromaTerm#highlight-rules)
+- The included configuration has been tested with a limited set of Juniper, Cisco, and Arista devices
+- Different NOS versions may require pattern adjustments in `.chromaterm.yml`
+- Some commands or output formats may not be covered by the default patterns
+- Highlighting patterns are regex-based and may need tuning for edge cases
 
-## Special Thanks
+## Troubleshooting
 
-Thanks to [hSaria](https://github.com/hSaria) for creating [Chromaterm](https://github.com/hSaria/ChromaTerm) which is used as a based for this tool.
+**Highlighting not working:**
+
+- Verify ChromaTerm is installed: `ct --version`
+- Check that `~/.chromaterm.yml` exists and is readable
+- Ensure your shell function is loaded (restart terminal or source your profile)
+- Test with local files first: `cat tests/arista_pref_list.txt | ct`
+
+**Colors look wrong:**
+
+- The default config is optimized for dark backgrounds
+- Adjust colors in `~/.chromaterm.yml` for your terminal theme
+- Verify your terminal supports 256 colors
+
+**SSH function conflicts:**
+
+- If you have existing SSH aliases or functions, they may conflict
+- Rename the function or adjust the wrapper accordingly
+
+## Acknowledgments
+
+This project is built on [ChromaTerm](https://github.com/hSaria/ChromaTerm) by [hSaria](https://github.com/hSaria). ChromaTerm is a powerful tool that enables syntax highlighting for interactive applications like SSH. Thank you for creating such a versatile solution!
